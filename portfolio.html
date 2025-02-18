@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <style>
+    header {
+    background-color: blue;
+    color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+
+nav {
+    display: flex;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: goldenrod;
+}
+
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+section {
+    background-color: white;
+    padding: 40px;
+    width: 80%;
+    margin: 20px auto;
+    border: 2px solid red;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out;
+}
+
+section:hover {
+    transform: scale(1.01);
+}
+#qualification ul {
+    padding: 0;
+   
+}
+
+#qualification ul li {
+    padding: 10px;
+    margin: 5px;    
+    border-radius: 10px;
+}
+
+#skills ul {
+    padding: 0;
+   
+}
+
+#skills ul li {
+    padding: 10px;
+    margin: 5px;    
+    border-radius: 10px;
+}
+.info a {
+    font-weight: bold;
+    text-decoration: none;
+    color: navy; 
+    display: block;
+    
+}
+
+.info a:hover {
+    color: green;
+    cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#qualification">Qualification</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+    </header>
+    <center>
+    <img src="C:\Users\Sita Ram\Pictures\person2.jpg" alt="My Picture" width="300px" height="250px">
+    <h2>
+    Name:Sangam Shrestha<br><br>
+    Section:D 11<br><br>
+    Roll no:502
+    </h2>
+    </center>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I am Sangam Shrestha! I am currently studying in class 11 in NSS.I am very interested in the field of computer science. In the near future, I would like to work in the field of IT and Web development. </p>
+    </section>
+  <section id="projects">
+        <h2>Projects and Experience</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>I have done vairous projects related to basic HTML and CSS such as making simple websites using HTML and CSS which are creative,attractive and contain background images.I have designed simple registration form and login form.</p>
+            
+       </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>I am also very profound with backend application such as C/C++ . I have made simple C programs such as finding factorial of any number and finding the greatest among three numbers</p>
+        </div>
+    </section>
+ <section id="qualification">
+        <h2>Academic Qualification</h2>
+        <ul>
+            <li>Passed Secondary Level Education Board Exams i.e.SEE</li>
+            <li>Bridge Course on Science</li>
+        </ul>
+ </section>
+       
+
+   
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>C/C++</li>
+        </ul>
+    </section>
+
+     <section id="contact">
+        <h2>Contact info</h2>
+        <div class="info">
+            <p>
+               Email:sangamshresth2@gmail.com <br>
+               Phone no:9846023527
+            <a href="https://github.com/Sangam078" target="_blank">GitHub</a>
+           </p> 
+        </div>
+    </section>
+  </body>
+</html>
