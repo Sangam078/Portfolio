@@ -3,164 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
-    <style>
-    header {
-    background-color: blue;
-    color: white;
-    padding: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    <title>My Personal Portfolio</title>
+   <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background:#0f172a;
+      color:white;
+      line-height:1.6;
+    }
+
+    header{
+      width:100%;
+      padding:20px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      background:#0f172a;
+      border-bottom:1px solid rgba(255,255,255,0.1);
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:bold;
+      color:#38bdf8;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:25px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#38bdf8;
+    }
+
+    section{
+      min-height:100vh;
+      padding:120px 10%;
+    }
+    .profile-pic{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #38bdf8;
+  margin-bottom:25px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 40px;
-}
+    .hero{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
 
+    .hero h1{
+      font-size:60px;
+      margin-bottom:10px;
+    }
 
-nav {
-    display: flex;
-}
+    .hero h1 span{
+      color:#38bdf8;
+    }
 
-nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
+    .hero p{
+      max-width:600px;
+      color:#cbd5e1;
+      margin-bottom:25px;
+      font-size:18px;
+    }
 
-nav a:hover {
-    color: goldenrod;
-}
+    .btn{
+      display:inline-block;
+      width:fit-content;
+      padding:12px 25px;
+      background:#38bdf8;
+      color:#0f172a;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+      transition:0.3s;
+    }
 
+    .btn:hover{
+      transform:translateY(-3px);
+    }
 
-body {
-    font-family: sans-serif;
-    margin: 0;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-}
+    .section-title{
+      font-size:40px;
+      margin-bottom:40px;
+      color:#38bdf8;
+    }
 
+    .about p{
+      max-width:700px;
+      color:#cbd5e1;
+    }
 
-section {
-    background-color: white;
-    padding: 40px;
-    width: 80%;
-    margin: 20px auto;
-    border: 2px solid red;
-    text-decoration: none;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-out;
-}
+    .skills-container{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+    }
 
-section:hover {
-    transform: scale(1.01);
-}
-#qualification ul {
-    padding: 0;
-   
-}
+    .skill{
+      padding:12px 20px;
+      background:#1e293b;
+      border-radius:8px;
+      transition:0.3s;
+    }
 
-#qualification ul li {
-    padding: 10px;
-    margin: 5px;    
-    border-radius: 10px;
-}
+    .skill:hover{
+      background:#38bdf8;
+      color:#0f172a;
+    }
 
-#skills ul {
-    padding: 0;
-   
-}
+    .projects-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
 
-#skills ul li {
-    padding: 10px;
-    margin: 5px;    
-    border-radius: 10px;
-}
-.info a {
-    font-weight: bold;
-    text-decoration: none;
-    color: navy; 
-    display: block;
-    
-}
+    .project-card{
+      background:#1e293b;
+      padding:25px;
+      border-radius:12px;
+      transition:0.3s;
+    }
 
-.info a:hover {
-    color: green;
-    cursor: pointer;
-}
+    .project-card:hover{
+      transform:translateY(-5px);
+    }
 
-</style>
+    .project-card h3{
+      margin-bottom:10px;
+      color:#38bdf8;
+    }
+
+    .project-card p{
+      color:#cbd5e1;
+      margin-bottom:15px;
+    }
+
+    .project-card a{
+      color:#38bdf8;
+      text-decoration:none;
+    }
+
+    .contact p{
+      margin-bottom:15px;
+      color:#cbd5e1;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      border-top:1px solid rgba(255,255,255,0.1);
+      color:#94a3b8;
+    }
+
+    @media(max-width:768px){
+
+      header{
+        padding:20px 5%;
+      }
+
+      section{
+        padding:120px 5%;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      nav a{
+        margin-left:15px;
+      }
+    }
+
+  </style>
 </head>
 <body>
     <header>
-        <h1>My Portfolio</h1>
+        <div class="logo">Sangam Shrestha</div>
         <nav>
-            <ul>
+            <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#qualification">Qualification</a>
             <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <center>
-    <img src="C:\Users\Sita Ram\Pictures\person2.jpg" alt="My Picture" width="300px" height="250px">
-    <h2>
-    Name:Sangam Shrestha<br><br>
-    Section:D 11<br><br>
-    Roll no:502
-    </h2>
-    </center>
+    <section class="hero" id="home">
+        <img src="photo.jpg" alt="Profile Picture" class="profile-pic">
+        <h1>Hi! I am <span>Sangam Shrestha</span></h1>
+        <p>I am currently a student learning web development as well as AI and It sectors.
+        I am quite intersented in web development with expertise in both frontend and backend programming</p>
+        <a href="#projects" class="btn">View Projects</a>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I am Sangam Shrestha! I am currently studying in class 11 in NSS.I am very interested in the field of computer science. In the near future, I would like to work in the field of IT and Web development. </p>
     </section>
-  <section id="projects">
-        <h2>Projects and Experience</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>I have done vairous projects related to basic HTML and CSS such as making simple websites using HTML and CSS which are creative,attractive and contain background images.I have designed simple registration form and login form.</p>
-            
-       </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>I am also very profound with backend application such as C/C++ . I have made simple C programs such as finding factorial of any number and finding the greatest among three numbers</p>
-        </div>
-    </section>
- <section id="qualification">
-        <h2>Academic Qualification</h2>
-        <ul>
-            <li>Passed Secondary Level Education Board Exams i.e.SEE</li>
-            <li>Bridge Course on Science</li>
-        </ul>
- </section>
-       
+    <section class="about" id="about">
+        <h2 class="section-title">About me</h2>
+        <p>
+      I am currently learning frontend development using HTML, CSS,
+      and JavaScript. I enjoy creating clean user interfaces and
+      interactive web projects to improve my programming skills.
+        </p>
 
-   
+    </section>
     <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>C/C++</li>
-        </ul>
-    </section>
+        <h2 class="section-title">Skills</h2>
 
-     <section id="contact">
-        <h2>Contact info</h2>
-        <div class="info">
-            <p>
-               Email:sangamshresth2@gmail.com <br>
-               Phone no:9846023527
-            <a href="https://github.com/Sangam078" target="_blank">GitHub</a>
-           </p> 
-        </div>
+    <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Javascript</div>
+        <div class="skill">Java</div>
+        <div class="skill">Github</div>
+    </div>
     </section>
-  </body>
+    <section id="projects">
+         <h2 class="section-title">Projects</h2>
+         <div class="projects-container">
+            <div class="project-card">
+                <h3>Tic Tac Toe</h3>
+                <p>A simple tic tac toe game with animation which can be played with friends or even with AI</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project-card">
+        <h3>Calculator</h3>
+
+        <p>
+          A responsive calculator made using JavaScript.
+        </p>
+
+        <a href="#">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+
+        <p>
+          My personal portfolio website using HTML and CSS.
+        </p>
+
+        <a href="#">View Project</a>
+      </div>
+
+         </div>
+
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p>Email:sangamshresth2@gmail.com</p>
+        <p>Github:<a href="https://github.com/Sangam078">Sangam078</a></p>
+    </section>
+    <footer>@2026 Sangam Shrestha</footer>
+
+</body>
 </html>
